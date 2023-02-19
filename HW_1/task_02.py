@@ -7,7 +7,7 @@
 
 nums = int(input('Введите трехзначное число: '))
 sum = 0
-for i in range (nums, -1, -1):
+for _ in str(nums):
     sum += nums % 10
     nums //= 10
 print(sum)
