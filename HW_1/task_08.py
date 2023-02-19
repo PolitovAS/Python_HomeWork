@@ -10,4 +10,4 @@ n = int(input("Введите длинну шоколадки: "))
 m = int(input("Введите ширину шоколадки: "))
 k = int(input("Сколько долек вы хотите отломить?: "))
 
-print('yes' if n * m > k and k % n == 0 or k % m == 0 else 'no')
+print('yes' if n * m > k and (k % n == 0 or k % m == 0) else 'no')
