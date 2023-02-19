@@ -5,3 +5,9 @@
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0)
 
+nums = int(input('Введите трехзначное число: '))
+sum = 0
+for i in range (nums, -1, -1):
+    sum += nums % 10
+    nums //= 10
+print(sum)
