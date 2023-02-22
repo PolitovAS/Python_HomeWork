@@ -9,4 +9,4 @@
 # 60 -> 10  40  10
 
 nums = int(input('Введите количество журавликов: '))
-print(nums // 3 // 2, nums // 3 * 2, nums // 3 // 2)
+print(var := nums // 3 // 2, var * 4, var)
