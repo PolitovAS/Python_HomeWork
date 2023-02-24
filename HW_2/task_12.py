@@ -7,22 +7,25 @@
 s = int(input('Сумма чисел: '))
 p = int(input('Произведение чисел: '))
 
-# Первый вариант
+
 for x in range(s):
     for y in range(p):
         if s == x + y and p == x * y:
             print(f'x = {x}, y = {y}')
-            
+            break
+    else:
+        continue
+    break 
+else:
+    print('Подсказки не правильные! или Числа не натуральные!')   
 
-# Второй вариант
-# from math import sqrt
+# второй вариант
+# s = int(input('введите сумму двух чисел: '))
+# p = int(input('введите произведение двух чисел: '))
 
-# D = s * s - 4 * p
-
-# if D < 0:
-#     print('Решений нет')
-    
-# x = int((s + sqrt(D)) / 2)
-# y = int((s - sqrt(D)) / 2)
-
-# print(f'x = {x}, y = {y}')
+# for x in range(1, 1000):
+#     if s - x == p // x and p % x == 0:
+#         print(x, p // x)
+#         break
+# else:
+#     print('решения нет')

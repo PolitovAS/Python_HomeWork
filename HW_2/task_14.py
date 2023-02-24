@@ -2,6 +2,6 @@
 
 n = int(input('Введите число: '))
 i = 0
-while 2 ** i <= n:
-    print(2 ** i)
+while (var := 2 ** i) <= n:
+    print(var)
     i += 1
