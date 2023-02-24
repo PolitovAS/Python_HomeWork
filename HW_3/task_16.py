@@ -12,15 +12,16 @@
 
 n = int(input('Введите количество элементов в массиве: '))
 x = input('Введите искомое число: ')
-A = []
 
-# Вариант 1
-for i in range(n):
-    A.append(i + 1)
-print(*A)
-print(A.count(int(x)))
+# Вариант 1 (Перебирается массив из последовательных чисел. искомое число не повторится больше одного раза)
+# A = []
+# for i in range(n):
+#     A.append(i + 1)
+# print(*A)
+# print(A.count(int(x)))
 
-# Вариант 2
+# Вариант 2 (Чтоб не забывать While воспользуемся им. создаем массив в терминале вручную)
+# A = []
 # i = 0
 # while i < n:
 #     string = 'Введите элемент №' + str(i + 1) + ': '
@@ -28,3 +29,9 @@ print(A.count(int(x)))
 #     i += 1
 # print(*A)
 # print(A.count(x))
+
+# Вариант 3 (Массив заполняем рандомными числами)
+import random
+A = [random.randint(1, n) for _ in range(n)]
+print(*A)
+print(A.count(int(x)))
