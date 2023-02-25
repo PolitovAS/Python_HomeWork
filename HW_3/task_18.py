@@ -17,9 +17,18 @@ for i in range(n):
 print('Массив:', *A)
 
 X = int(input('Введите искомое число: '))
-number = 0
-for i in range(len(A)):
-    if 0 < X - A[i] < X - number:
+number = A[0]
+min_dif = A[0] - X
+
+if min_dif < 0:
+    min_dif = -min_dif
+
+for i in range(n):
+    dif = A[i] - X
+    if dif < 0:
+        dif = -dif
+    if dif < min_dif:
+        min_dif = dif
         number = A[i]
 
 print(f'Самое близкое по значению число в массиве: {number}')
