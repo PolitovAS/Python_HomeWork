@@ -23,12 +23,12 @@ min_dif = A[0] - X
 if min_dif < 0:
     min_dif = -min_dif
 
-for i in range(n):
-    dif = A[i] - X
+for i in A:
+    dif = i - X
     if dif < 0:
         dif = -dif
     if dif < min_dif:
         min_dif = dif
-        number = A[i]
+        number = i
 
 print(f'Самое близкое по значению число в массиве: {number}')
