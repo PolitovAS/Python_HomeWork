@@ -17,8 +17,8 @@ for i in range(m):
 print('Список 1:', *A)
 print('Список 2:', *B)
 res = []
-for i in range(n):
-    for j in range(m):
-        if A[i] == B[j]:
-            res.append(A[i])
-print('Результат:', *sorted(set(res)))
+for i in A:
+    for j in B:
+        if i == j and i not in res:
+            res.append(i)
+print('Результат:', *sorted(res))
