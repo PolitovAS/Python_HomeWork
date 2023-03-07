@@ -7,9 +7,6 @@ A = int(input("Введите число A: "))
 B = int(input("Введите число B: "))
 def degree(a, b):
     if b == 0:
-        return '1'
-    elif b == 1:
-        return a
-    else:
-        return a * degree(a, b - 1)
+        return 1
+    return a * degree(a, b - 1)
 print(degree(A,B))
