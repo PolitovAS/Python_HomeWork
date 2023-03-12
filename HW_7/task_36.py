@@ -15,13 +15,25 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
+# Первый способ
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     for i in range(1, num_rows + 1):
+#         row = []
+#         for j in range(1, num_columns + 1):
+#             row.append(operation(i, j))
+#         print(*row, sep='\t')
 
+
+# print_operation_table(lambda x, y: x * y)
+
+# Второй способ
 def print_operation_table(operation, num_rows=6, num_columns=6):
-    for i in range(1, num_rows + 1):
-        row = []
-        for j in range(1, num_columns + 1):
-            row.append(operation(i, j))
+    table = map(lambda i: map(lambda j: operation(i, j), range(1, num_columns + 1)), range(1, num_rows + 1))
+    for row in table:
         print(*row, sep='\t')
 
-
 print_operation_table(lambda x, y: x * y)
+
+# Используем функции высшего порядка `map` и `lambda` для создания списка значений таблицы. 
+# Внутри `map` создаются вложенные `map`, которые применяют функцию `operation` к парам индексов `i` и `j`.
+# Затем происходит печать элементов списка с разделителем табуляции.
