@@ -37,3 +37,10 @@ print_operation_table(lambda x, y: x * y)
 # Используем функции высшего порядка `map` и `lambda` для создания списка значений таблицы. 
 # Внутри `map` создаются вложенные `map`, которые применяют функцию `operation` к парам индексов `i` и `j`.
 # Затем происходит печать элементов списка с разделителем табуляции.
+
+# Третий способ
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     for row in range(1, num_rows + 1):
+#         print(*map(operation, [row] * num_columns, range(1, num_columns + 1)), sep='\t')
+
+# print_operation_table(lambda x, y: x ** y)
